@@ -34,8 +34,8 @@ express = '+'+mynumber[0:3]+' '+mynumber[3:5]+' '+mynumber[5:8]+' '+mynumber[8:1
 technomart = '+'+mynumber[0:3]+' '+mynumber[3:5]+' '+mynumber[5:8]+' '+mynumber[8:10]+' '+mynumber[10:12]
 outlas = mynumber[3:12]
 creditasia = mynumber[4:4]+'('+mynumber[5:7]+')'+mynumber[5:8]+' '+mynumber[8:10]+' '+mynumber[10:12]
-if CLOSE_AFTER > 100:
-	print('ERROR THE VALUE CANNOT BE MORE THAN 100!')
+if CLOSE_AFTER > 1000:
+	print('ERROR THE VALUE CANNOT BE MORE THAN 1000!')
 	exit()
 while True :
  if time.time() > start_time + float(CLOSE_AFTER): exit()
