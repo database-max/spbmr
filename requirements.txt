@@ -1,0 +1,6 @@
+requests
+json
+time
+telebot
+beautifulsoup4
+colorama
